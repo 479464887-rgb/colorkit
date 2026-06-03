@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>ColorKit · 设置</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:14px;color:#c9d1d9;background:#0d1117;max-width:500px;margin:40px auto;padding:0 20px}
+h1{font-size:22px;margin-bottom:24px;background:linear-gradient(90deg,#f85149,#f0c040,#3fb950,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin-bottom:20px}
+.card h2{font-size:15px;margin-bottom:14px}.btn{padding:8px 20px;font-size:14px;font-weight:600;border-radius:6px;cursor:pointer;border:none;background:#238636;color:#fff}
+.btn:hover{background:#2ea043}
+.field{margin-bottom:12px}
+.field label{display:block;margin-bottom:4px;font-size:13px;font-weight:600}
+</style></head>
+<body>
+<h1>🎨 ColorKit</h1>
+<div class="card">
+  <h2>数据管理</h2>
+  <div class="field"><label>调色板和颜色历史存储在本地浏览器中。清除数据不可恢复。</label></div>
+  <button class="btn" id="clear-data" style="background:#da3633">清除所有数据</button>
+</div>
+<script>
+document.getElementById('clear-data').addEventListener('click',async()=>{
+  if(confirm('确认删除所有调色板和颜色历史？')){
+    await chrome.storage.local.set({palettes:[],colorHistory:[]});
+    alert('已清除');
+    window.close();
+  }
+});
+</script>
+</body></html>
