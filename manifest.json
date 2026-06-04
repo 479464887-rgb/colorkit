@@ -4,11 +4,15 @@
   "version": "1.0.0",
   "description": "设计师配色工具箱 — 取色/调色板/色彩搭配生成器",
   "homepage_url": "https://479464887-rgb.github.io/colorkit/",
-  "author": {"email": "tulv202900@163.com"},
-  "permissions": ["storage", "commands"],
+  "author": {
+    "email": "tulv202900@163.com"
+  },
+  "permissions": [
+    "storage",
+    "commands"
+  ],
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
+    "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
@@ -30,7 +34,10 @@
   },
   "commands": {
     "_execute_action": {
-      "suggested_key": { "default": "Ctrl+Shift+C", "mac": "Command+Shift+C" },
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+Shift+C"
+      },
       "description": "打开 ColorKit"
     }
   }
