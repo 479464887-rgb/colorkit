@@ -1,5 +1,6 @@
 {
   "manifest_version": 3,
+  "minimum_chrome_version": "88",
   "name": "ColorKit",
   "version": "1.0.0",
   "description": "设计师配色工具箱 — 取色/调色板/色彩搭配生成器",
